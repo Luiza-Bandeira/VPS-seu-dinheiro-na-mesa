@@ -49,8 +49,8 @@ const Index = () => {
   const [videoUrl, setVideoUrl] = useState<string>("");
   const [price, setPrice] = useState<string>("1600");
   const [originalPrice, setOriginalPrice] = useState<string>("5894");
-  const [installments, setInstallments] = useState<string>("12x de R$ 162,81");
-  const [paymentLink, setPaymentLink] = useState<string>("https://mpago.la/1KiNKG2");
+  const [installments, setInstallments] = useState<string>("12x de R$ 165,48");
+  const [paymentLink, setPaymentLink] = useState<string>("https://pay.hotmart.com/I104619180M?off=mqqj1rts&bid=1771966195512");
   const [specialCondition, setSpecialCondition] = useState<string>("janeiro");
   useEffect(() => {
     const checkUser = async () => {
