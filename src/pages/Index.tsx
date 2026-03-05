@@ -592,7 +592,7 @@ const Index = () => {
       <section className="py-20 px-6 bg-gradient-to-br from-brand-blue to-brand-blue/90">
         <motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center text-white">
           <Badge className="bg-brand-magenta mb-6 px-4 py-2 text-white">
-            Turma piloto — apenas 8 vagas
+            Turma Especial — apenas 10 vagas
           </Badge>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
