@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap');
+
+.sdm-obrigada {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  background: #082d60;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ── FUNDO ─────────────────────────────────── */
+.bg-layer {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-layer::before {
+  content: '';
+  position: absolute;
+  top: -160px; right: -160px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250,188,211,0.1) 0%, transparent 65%);
+}
+
+.bg-layer::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 440px; height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,77,130,0.55) 0%, transparent 65%);
+}
+
+.accent-line {
+  position: fixed;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(to bottom, #fabcd3, transparent 80%);
+  z-index: 1;
+}
+
+/* ── HEADER ────────────────────────────────── */
+.obr-header {
+  position: relative;
+  z-index: 2;
+  padding: 36px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(250,188,211,0.1);
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fabcd3;
+  letter-spacing: 0.08em;
+}
+
+.header-tag {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #6a82a8;
+}
+
+/* ── MAIN ──────────────────────────────────── */
+.obr-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.obr-card {
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+  animation: obr-fadeUp 0.7s ease both;
+}
+
+@keyframes obr-fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Ornamento ✦ */
+.ornament {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  color: #fabcd3;
+  opacity: 0.5;
+  line-height: 1;
+  margin-bottom: 32px;
+  animation: obr-pulse 3s ease-in-out infinite;
+}
+
+@keyframes obr-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 0.8; transform: scale(1.08); }
+}
+
+.sdm-obrigada .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #fabcd3;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.obr-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 7vw, 68px);
+  font-weight: 300;
+  line-height: 1.08;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.obr-title em {
+  font-style: italic;
+  color: #fabcd3;
+}
+
+.divider {
+  width: 48px; height: 1px;
+  background: #fabcd3;
+  margin: 24px auto;
+  opacity: 0.6;
+}
+
+.body-text {
+  font-size: 16px;
+  color: #c8d6ee;
+  line-height: 1.85;
+  margin-bottom: 48px;
+  font-weight: 300;
+}
+
+.body-text strong {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ── CAIXINHA DE PRÓXIMOS PASSOS ────────────── */
+.steps {
+  background: rgba(250,188,211,0.06);
+  border: 1px solid rgba(250,188,211,0.18);
+  border-radius: 10px;
+  padding: 36px 40px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.steps-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #fabcd3;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.step-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.step-item:last-child { margin-bottom: 0; }
+
+.step-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(152,16,75,0.2);
+  border: 1px solid rgba(250,188,211,0.3);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: #fabcd3;
+  margin-top: 1px;
+}
+
+.step-text {
+  font-size: 14px;
+  color: #c8d6ee;
+  line-height: 1.7;
+}
+
+.step-text strong {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+/* ── BOTÃO VOLTAR ───────────────────────────── */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: 1px solid rgba(250,188,211,0.3);
+  color: #6a82a8;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.btn-back:hover {
+  border-color: #fabcd3;
+  color: #fabcd3;
+  transform: translateY(-2px);
+}
+
+/* ── FOOTER ────────────────────────────────── */
+.obr-footer {
+  position: relative;
+  z-index: 2;
+  padding: 24px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid rgba(250,188,211,0.08);
+}
+
+.obr-footer .footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: #fabcd3;
+  letter-spacing: 0.08em;
+}
+
+.obr-footer .footer-note {
+  font-size: 11px;
+  color: #6a82a8;
+  letter-spacing: 0.04em;
+}
+
+/* ── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 640px) {
+  .obr-header { padding: 28px; }
+  .obr-main { padding: 40px 24px; }
+  .steps { padding: 28px 24px; }
+  .obr-footer { padding: 20px 28px; }
+}
